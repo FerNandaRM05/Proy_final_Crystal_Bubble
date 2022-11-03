@@ -1,7 +1,8 @@
 {
-  "name": "photo-gallery",
+  "name": "AppCB",
   "integrations": {
     "capacitor": {}
   },
-  "type": "react"
+  "type": "react",
+  "id": "86c81b96"
 }
