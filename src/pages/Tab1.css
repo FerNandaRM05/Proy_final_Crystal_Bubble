@@ -1,0 +1,63 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap');
+*
+{
+    font-family: "Josefin Sans", sans-serif;
+}
+
+
+.input
+{
+    display: flex;
+    flex-direction: column;
+}
+.containerContent
+{
+    top: 56px;
+    margin-bottom: 5rem;
+}
+#formulario
+{
+    margin: 2rem;
+}
+#enviar
+{
+    text-align: center;
+}
+#enviar > button
+{
+    padding: 1rem;
+    color: white;
+    background-color: black;
+}
+#enviar > button:active
+{
+    color: black;
+    background-color: white;
+}
+#divRedes
+{
+    margin: 2rem;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+.labels
+{
+    font-size: medium;
+}
+#divRedes > *
+{
+    font-size: large;
+    border: .1rem solid  grey;
+    padding: .25rem;
+    color: grey;
+    border-radius: 15px;
+}
+#divMapa
+{
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: space-around;
+    text-align: center;
+}
