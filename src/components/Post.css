@@ -1,0 +1,32 @@
+.post {
+    display: flex;
+    align-items: center;
+    border: solid 1px black;
+    margin: 4%;
+    border-radius: 0.8rem;
+    height: 150px;
+    padding: 2%;
+    text-decoration: none;
+    color: black;
+}
+
+.postImg {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-left: 3%;
+}
+
+.postImg img {
+    max-width: initial;
+    width: auto;
+    height: 100%;
+    margin-left: -50px;
+
+}
+
+.postContent {
+    width: 80%;
+    margin-left: 2%;
+}
