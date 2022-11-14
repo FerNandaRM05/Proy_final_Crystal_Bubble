@@ -1,9 +1,8 @@
 import { IonContent, IonHeader, IonIcon, IonPage, IonTitle, IonToolbar } from '@ionic/react';
 import { logoInstagram, logoYoutube, logoTiktok, locationOutline } from 'ionicons/icons';
 import React from 'react';
-import ExploreContainer from '../components/ExploreContainer';
 import './Tab1.css';
-import { Wrapper, Status } from "@googlemaps/react-wrapper";
+
 
 const Estatic: React.FC = () => {
   return (
