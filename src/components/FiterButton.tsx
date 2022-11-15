@@ -1,16 +1,23 @@
 import { useState } from "react";
+import { FilterProps, Post } from "./Blog";
 import './FilterButton.css'
 
-export const FilterButton = ({name, setFilter, id, isPressed}: {isPressed: boolean, name:string, setFilter: React.Dispatch<React.SetStateAction<number>>, id:number}) => {
+
+export const FilterButton = (props: FilterProps) => {
+
+    const {name, setFilter, id, isPressed, setCurrentPage, setInfiniteDisabled, setPosts} = props
     const [selected, setSelected] = useState(isPressed);
     
     const handleClick = () => {
-        if (selected){
-            setFilter(id)
-            setSelected(false); 
-        } else if (!selected){
+        setCurrentPage(1);
+        setPosts([] as Post[]);
+        if (!selected){
+            setFilter(id);
+            setInfiniteDisabled(false)
+            setSelected(true); 
+        } else if (selected){
             setFilter(0);
-            setSelected(true)
+            setSelected(false)
         }
     }
     

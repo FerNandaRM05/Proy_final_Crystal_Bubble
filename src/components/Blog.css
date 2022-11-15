@@ -6,3 +6,12 @@
     text-align: center;
     text-emphasis: initial;
 }
+
+.filterContainer {
+    display: flex;
+    position: sticky;
+    top: 0;
+    padding-block: 3%;
+    background: white;
+    z-index: 10;
+}

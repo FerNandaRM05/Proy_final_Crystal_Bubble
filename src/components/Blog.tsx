@@ -1,11 +1,12 @@
 
-import { IonInfiniteScroll, IonInfiniteScrollContent, IonSpinner } from '@ionic/react';
+import { IonInfiniteScroll, IonInfiniteScrollContent, IonLoading, IonSpinner } from '@ionic/react';
 import React, { useEffect, useState } from 'react';
-import { FilterList } from './FilterList';
+import { FilterButton } from './FiterButton';
 import { Post } from './Post';
 import './Blog.css'
+// import { FilterList } from './FilterList';
 
-export type Post = {
+export interface Post {
     id: number,
     title: string,
     date: string,
@@ -17,6 +18,20 @@ export type Post = {
     category: number,
 }
 
+export interface Categories {
+    id: number,
+    name: string
+}
+
+export interface FilterProps {
+    setFilter: React.Dispatch<React.SetStateAction<number>>,
+    setCurrentPage: React.Dispatch<React.SetStateAction<number>>,
+    setInfiniteDisabled: React.Dispatch<React.SetStateAction<boolean>>
+    isPressed: boolean,
+    name: string,
+    id: number,
+    setPosts: React.Dispatch<React.SetStateAction<Post[]>>
+}
 
 
 export const Blog: React.FC = () => {
@@ -25,36 +40,65 @@ export const Blog: React.FC = () => {
     const [currentPage, setCurrentPage] = useState(1);
     const [loading, setLoading] = useState(false);
     const [isInfiniteDisabled, setInfiniteDisabled] = useState(false);
+    // const [totalWpPages, setTotalWpPages] = useState(0);
+    // const [totalWpPosts, setTotalWpPosts] = useState(0);
 
     const [filter, setFilter] = useState(0);
     const [filteredPost, setFilteredPost] = useState(posts)
-
-
-    useEffect(() => {
-        if (filter === 0) {
-            setFilteredPost(posts);
-        } else {
-            const filtered = posts.filter((post) => post.category === filter);
-            setFilteredPost(filtered);
-        }
-    }, [filter, posts]);
+    const [categories, setCategories] = useState([] as Categories[]);
 
     useEffect(() => {
-        if (!isInfiniteDisabled) fetchData(currentPage)
-    }, [currentPage, isInfiniteDisabled]);
+        fetch('https://crystalbubbleshop.com/wp-json/wp/v2/categories')
+            .then(response => response.json())
+            .then(data => {
+                let categories = [] as Categories[];
+                for (const item of data) {
+                    let newCategory: Categories = {
+                        id: item.id,
+                        name: item.name
+                    }
+                    categories = [...categories, newCategory];
+                }
+                setCategories(categories);
+            })
+    }, [])
 
-    const fetchData = async (page: number) => {
-        await fetch(`https://crystalbubbleshop.com/wp-json/wp/v2/posts?page=${page}`)
+    useEffect(() => {
+
+            if (filter === 0) {
+                fetchData(currentPage)
+            } else {
+                fetchData(currentPage, filter)
+            }
+        
+    }, [filter, currentPage]);
+
+    // useEffect(() => {
+    //      fetchData(currentPage)
+    // }, [currentPage, isInfiniteDisabled]);
+
+    const fetchData = async (page: number, filter?: number) => {
+        let totalWpPosts = 0;
+
+        setLoading(true);
+        let categoryQuery = filter ? `&categories=${filter}` : "";
+        await fetch(`https://crystalbubbleshop.com/wp-json/wp/v2/posts?page=${page}${categoryQuery}`)
             .then(response => {
                 if (response.status === 400) {
                     setInfiniteDisabled(true);
+                    setLoading(false);
                     return;
                 } else {
+                    response.headers.forEach(function (value, key) {
+                        if (key === "x-wp-totalpages") {
+                            totalWpPosts = parseInt(value)
+                        }
+                    })
                     return response.json()
                 }
             })
             .then(data => {
-                let newData = posts;
+                let newData =  posts;
                 for (const item of data) {
                     let newItem: Post = {
                         id: item.id,
@@ -70,6 +114,9 @@ export const Blog: React.FC = () => {
                     newData = [...newData, newItem];
                 }
                 setPosts(newData);
+                if (totalWpPosts <= page) {
+                    setInfiniteDisabled(true)
+                }
                 setLoading(false);
             })
     }
@@ -83,33 +130,54 @@ export const Blog: React.FC = () => {
 
     return (
         <>
+            <div className="filterContainer">
+                {categories.map((item) => {
+                    return (<FilterButton
+                        isPressed={item.id === filter}
+                        id={item.id}
+                        name={item.name}
+                        setFilter={setFilter}
+                        setCurrentPage={setCurrentPage}
+                        setInfiniteDisabled={setInfiniteDisabled}
+                        setPosts={setPosts}
+                    />)
+                })
+                }
+            </div>
+            {/* <FilterList
+                        filter={filter}
+                        categories={categories}
+                        setInfiniteDisabled={setInfiniteDisabled}
+                        setCurrentPage={setCurrentPage}
+                        setFilter={setFilter}
+                        /> */}
+
             {
                 loading && posts.length === 0
                     ?
-                    <IonSpinner />
+                    <IonInfiniteScrollContent
+                                loadingSpinner="bubbles"
+                                loadingText="Cargando posts..."
+                            />
                     :
                     <>
-                    <FilterList
-                    setFilter={setFilter}
-                    filter={filter}
-                    />
                         <div id="scrollableContent">
-                    {
-                                filteredPost.map((post) => {
+                            {
+                                posts.map((post) => {
                                     return (
                                         <Post
-                                        key={post.id}
-                                        link={post.link}
-                                        img={post.img}
-                                        title={post.title}
-                                        description={post.description}
-                                        date={post.date}
-                                        category={post.category}
+                                            key={post.id}
+                                            link={post.link}
+                                            img={post.img}
+                                            title={post.title}
+                                            description={post.description}
+                                            date={post.date}
+                                            category={post.category}
                                         />
-                                        )
-                                    })
-                                    }
-                                    </div>
+                                    )
+                                })
+                            }
+                        </div>
 
                         <IonInfiniteScroll
                             onIonInfinite={(e: CustomEvent<void>) => nextPage(e)}
@@ -122,7 +190,12 @@ export const Blog: React.FC = () => {
                                 loadingText="Cargando posts..."
                             />
                         </IonInfiniteScroll>
-                        {isInfiniteDisabled ? <p className='message'>No hay más posts</p> : ""}
+                        {isInfiniteDisabled 
+                        ?  
+                        <p className='message'>
+                            {filteredPost.length === 0 ? "No hay ningún post en esta cagetoría":"No hay más  posts"}
+                        </p> 
+                        : ""}
                     </>
             }
         </>
