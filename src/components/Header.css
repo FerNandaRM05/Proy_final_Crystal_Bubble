@@ -1,0 +1,16 @@
+ion-header{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 5px;
+    background-color: white;
+}
+.img{
+    max-width: 50%;
+    width: 25%;
+}
+.img2{
+    max-width: 50%;
+    width: 10%;
+}
