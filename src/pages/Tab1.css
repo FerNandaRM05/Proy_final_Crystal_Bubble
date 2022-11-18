@@ -5,14 +5,10 @@
     font-family: "Josefin Sans", sans-serif;
 }
 
-<<<<<<< HEAD
 .contenido
 {
     margin: 20px 5px;
 }
-=======
-
->>>>>>> 5f9c2d3a077e51ae0235c1b3347daf36a5da60b4
 .input
 {
     display: flex;
@@ -55,7 +51,6 @@
 }
 #divRedes > *
 {
-<<<<<<< HEAD
     font-size: xx-large;
     border: .1rem solid  #6C4F78;
     padding: .5rem;
@@ -67,13 +62,6 @@
 {
     color: #71328B;
     border: .1rem solid #71328B;
-=======
-    font-size: large;
-    border: .1rem solid  grey;
-    padding: .25rem;
-    color: grey;
-    border-radius: 15px;
->>>>>>> 5f9c2d3a077e51ae0235c1b3347daf36a5da60b4
 }
 #divMapa
 {
@@ -81,12 +69,9 @@
     flex-direction: column-reverse;
     justify-content: space-around;
     text-align: center;
-<<<<<<< HEAD
 }
 #mapa
 {
     width: 100%;
     min-height: 15rem;
-=======
->>>>>>> 5f9c2d3a077e51ae0235c1b3347daf36a5da60b4
 }
