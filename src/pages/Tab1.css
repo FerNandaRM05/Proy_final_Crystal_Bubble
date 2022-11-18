@@ -1,0 +1,77 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap');
+*
+{
+    font-family: "Josefin Sans", sans-serif;
+}
+
+.contenido
+{
+    margin: 20px 5px;
+}
+.input
+{
+    display: flex;
+    flex-direction: column;
+}
+.containerContent
+{
+    top: 56px;
+    margin-bottom: 5rem;
+}
+#formulario
+{
+    margin: 2rem;
+}
+#enviar
+{
+    text-align: center;
+}
+#enviar > button
+{
+    padding: 1rem;
+    color: white;
+    background-color: black;
+}
+#enviar > button:active
+{
+    color: black;
+    background-color: white;
+}
+#divRedes
+{
+    margin: 2rem;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+.labels
+{
+    font-size: medium;
+}
+#divRedes > *
+{
+    font-size: xx-large;
+    border: .1rem solid  #6C4F78;
+    padding: .5rem;
+    color: #6C4F78;
+    border-radius: 25px;
+    height: 50px;
+}
+#divRedes > *:active
+{
+    color: #71328B;
+    border: .1rem solid #71328B;
+}
+#divMapa
+{
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: space-around;
+    text-align: center;
+}
+#mapa
+{
+    width: 100%;
+    min-height: 15rem;
+}

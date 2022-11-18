@@ -1,0 +1,8 @@
+{
+  "name": "AppCB",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "react",
+  "id": "86c81b96"
+}
