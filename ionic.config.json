@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 {
   "name": "AppCB",
   "integrations": {
@@ -5,4 +6,13 @@
   },
   "type": "react",
   "id": "86c81b96"
+=======
+{
+  "name": "AppCB",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "react",
+  "id": "86c81b96"
+>>>>>>> 5f9c2d3a077e51ae0235c1b3347daf36a5da60b4
 }
