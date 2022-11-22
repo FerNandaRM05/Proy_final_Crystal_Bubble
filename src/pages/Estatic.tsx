@@ -3,6 +3,9 @@ import React from 'react';
 import ExploreContainer from '../components/ExploreContainer';
 import './Tab1.css';
 
+
+import contraCancer from "./img/contra-cancer.webp";
+
 const Estatic: React.FC = () => {
   return (
     <IonPage>
@@ -14,20 +17,37 @@ const Estatic: React.FC = () => {
       <IonContent fullscreen>
         <IonHeader collapse="condense">
           <IonToolbar>
-            <IonTitle size="large">Tab 1</IonTitle>
+            <IonTitle size="large">Contenidos</IonTitle>
           </IonToolbar>
         </IonHeader>
         <div>
-            <div className='containerPhoto'>
-            </div>
-            <div className='containerContent'>
-                <h1>
-                  {/* título de la página de contenido estático */}
-                </h1>
-                <p>
-                  {/* contenido de la página de contenido estático */}
-                </p>
-            </div>
+          <div className='containerContent'>
+            <a href="">
+              <div id="corporate" className='tarjeta'>
+              <p>La Marca</p>
+              </div>
+            </a>
+            <a href="">
+              <div id="comunidad" className='tarjeta' >
+                <p>Comunidad moda</p>
+              </div>
+            </a>
+            <a href="">
+              <div id="ventaprivada" className='tarjeta'>
+                <p>Venta privada</p>
+              </div>
+            </a>
+            <a href="">
+              <div id="blackfriday" className='tarjeta'>
+                <p></p>
+              </div>
+            </a>
+            <a href="">
+              <div id="contracancer" className='tarjeta'>
+                <p>Contra el cáncer</p>
+              </div>
+            </a>
+          </div>
         </div>
       </IonContent>
     </IonPage>
