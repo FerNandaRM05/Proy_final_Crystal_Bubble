@@ -14,6 +14,7 @@ import { ellipse, square, triangle, home, chatbubbles, bagHandle } from 'ionicon
 import Tab1 from './pages/Tab1';
 import Tab2 from './pages/Tab2';
 import Tab3 from './pages/Tab3';
+import Instrucciones from './pages/Modal/Instrucciones';
 
 /* Core CSS required for Ionic components to work properly */
 import '@ionic/react/css/core.css';
@@ -33,12 +34,23 @@ import '@ionic/react/css/display.css';
 
 /* Theme variables */
 import './theme/variables.css';
-import React from 'react';
+import React, { useState } from 'react';
 
 setupIonicReact();
 
-const App: React.FC = () => (
-  <IonApp>
+
+
+const App: React.FC = () => {
+
+  localStorage.setItem('user', 'Hola')
+  const [help, setHelp] = useState(true)
+
+  if (help) {
+    return <Instrucciones 
+    setHelp={setHelp}/>
+  }
+
+  return (<IonApp>
     <IonReactRouter>
       <IonTabs>
         <IonRouterOutlet>
@@ -54,14 +66,18 @@ const App: React.FC = () => (
           <Route exact path="/">
             <Redirect to="/tab1" />
           </Route>
+          <Route exact path="/instrucciones">
+            <Instrucciones
+            setHelp={setHelp} />
+          </Route>
         </IonRouterOutlet>
-        <IonTabBar slot="bottom">
+        <IonTabBar  slot="bottom">
           <IonTabButton tab="tab1" href="/tab1">
             <IonIcon icon={chatbubbles} />
             <IonLabel>Contacto</IonLabel>
           </IonTabButton>
           <IonTabButton tab="tab2" href="/tab2">
-            <IonIcon icon={home}/>
+            <IonIcon icon={home} />
             <IonLabel>Inicio</IonLabel>
           </IonTabButton>
           <IonTabButton tab="tab3" href="/tab3">
@@ -71,7 +87,8 @@ const App: React.FC = () => (
         </IonTabBar>
       </IonTabs>
     </IonReactRouter>
-  </IonApp>
-);
+  </IonApp>)
+
+}
 
 export default App;
