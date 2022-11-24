@@ -4,7 +4,7 @@ import React, { useEffect, useState } from 'react';
 import { FilterButton } from './FiterButton';
 import { Post } from './Post';
 import './Blog.css'
-// import { FilterList } from './FilterList';
+import { useCategories } from '../hooks/useCategories';
 
 export interface Post {
     id: number,
@@ -18,10 +18,6 @@ export interface Post {
     category: number,
 }
 
-export interface Categories {
-    id: number,
-    name: string
-}
 
 export interface FilterProps {
     setFilter: React.Dispatch<React.SetStateAction<number>>,
@@ -40,28 +36,8 @@ export const Blog: React.FC = () => {
     const [currentPage, setCurrentPage] = useState(1);
     const [loading, setLoading] = useState(false);
     const [isInfiniteDisabled, setInfiniteDisabled] = useState(false);
-    // const [totalWpPages, setTotalWpPages] = useState(0);
-    // const [totalWpPosts, setTotalWpPosts] = useState(0);
-
+    const categories = useCategories();
     const [filter, setFilter] = useState(0);
-    const [filteredPost, setFilteredPost] = useState(posts)
-    const [categories, setCategories] = useState([] as Categories[]);
-
-    useEffect(() => {
-        fetch('https://crystalbubbleshop.com/wp-json/wp/v2/categories')
-            .then(response => response.json())
-            .then(data => {
-                let categories = [] as Categories[];
-                for (const item of data) {
-                    let newCategory: Categories = {
-                        id: item.id,
-                        name: item.name
-                    }
-                    categories = [...categories, newCategory];
-                }
-                setCategories(categories);
-            })
-    }, [])
 
     useEffect(() => {
 
@@ -72,10 +48,6 @@ export const Blog: React.FC = () => {
             }
         
     }, [filter, currentPage]);
-
-    // useEffect(() => {
-    //      fetchData(currentPage)
-    // }, [currentPage, isInfiniteDisabled]);
 
     const fetchData = async (page: number, filter?: number) => {
         let totalWpPosts = 0;
@@ -144,13 +116,6 @@ export const Blog: React.FC = () => {
                 })
                 }
             </div>
-            {/* <FilterList
-                        filter={filter}
-                        categories={categories}
-                        setInfiniteDisabled={setInfiniteDisabled}
-                        setCurrentPage={setCurrentPage}
-                        setFilter={setFilter}
-                        /> */}
 
             {
                 loading && posts.length === 0
@@ -193,7 +158,7 @@ export const Blog: React.FC = () => {
                         {isInfiniteDisabled 
                         ?  
                         <p className='message'>
-                            {filteredPost.length === 0 ? "No hay ningún post en esta cagetoría":"No hay más  posts"}
+                            {posts.length === 0 ? "No hay ningún post en esta cagetoría":"No hay más  posts"}
                         </p> 
                         : ""}
                     </>

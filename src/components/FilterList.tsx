@@ -1,9 +1,6 @@
 import { FilterButton } from "./FiterButton"
 import { useEffect, useState } from "react"
 import './FilterList.css'
-import { Categories } from "./Blog"
-
-
 
 
 // const FilterList = ({ setFilter, filter, categories, setCurrentPage, setInfiniteDisabled }: { setFilter: React.Dispatch<React.SetStateAction<number>>, filter: number, categories: Categories[], setCurrentPage : React.Dispatch<React.SetStateAction<number>>, setInfiniteDisabled: React.Dispatch<React.SetStateAction<boolean>> }) => {

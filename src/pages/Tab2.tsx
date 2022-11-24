@@ -3,6 +3,7 @@ import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar } from '@ionic/rea
 import './Tab2.css';
 
 const Tab2: React.FC = () => {
+
   return (
     <IonPage>
       <IonHeader>
@@ -16,7 +17,6 @@ const Tab2: React.FC = () => {
             <IonTitle size="large">Tab 2</IonTitle>
           </IonToolbar>
         </IonHeader>
-
       </IonContent>
     </IonPage>
   );
