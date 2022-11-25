@@ -82,12 +82,12 @@ const Tab2: React.FC = () => {
         <IonCardHeader className='ion-text-center'>
           <IonCardTitle>MODA CRYSTAL BUBBLE TENDENCIAS PRÊT-À-PORTER</IonCardTitle>
         </IonCardHeader>
-        <div className='section'>
+        <IonCardContent className='section'>
 
           <IonCard className='card1'>
             <IonImg src='./img/card2.webp' />
             <IonCardContent className='ion-text-center'>
-              <IonCardTitle>MUJER PETITE</IonCardTitle>
+              <IonCardTitle color='secondary-contrast' >MUJER PETITE</IonCardTitle>
               <IonButton href='https://crystalbubbleshop.com/categorias/moda-petite/' shape='round'>Ver mas</IonButton>
             </IonCardContent>
           </IonCard>
@@ -95,7 +95,7 @@ const Tab2: React.FC = () => {
           <IonCard className='card2'>
             <IonImg src='./img/card1.webp' />
             <IonCardContent className='ion-text-center'>
-              <IonCardTitle>EXCLUSIVAS</IonCardTitle>
+              <IonCardTitle color='secondary-contrast'>EXCLUSIVAS</IonCardTitle>
               <IonButton href='https://crystalbubbleshop.com/categorias/mis-especiales/' shape='round'>Ver mas</IonButton>
             </IonCardContent>
           </IonCard>
@@ -103,13 +103,13 @@ const Tab2: React.FC = () => {
           <IonCard className='card3'>
             <IonImg src='./img/card3.webp' />
             <IonCardContent className='ion-text-center'>
-              <IonCardTitle>MUJER CURVY</IonCardTitle>
+              <IonCardTitle color='secondary-contrast'>MUJER CURVY</IonCardTitle>
               <IonButton href='https://crystalbubbleshop.com/categorias/moda-curvy/' shape='round'>Ver mas</IonButton>
             </IonCardContent>
           </IonCard>
 
-        </div>
-        <IonCardContent className='banner'>
+        </IonCardContent>
+        <IonCardContent className='banner dv'>
           <IonCard color={'primary'}>
             <IonCardContent>
               <IonCardTitle>
@@ -117,7 +117,7 @@ const Tab2: React.FC = () => {
               </IonCardTitle>
               ¿Sabes cuánto puede cambiar el día de alguien con una sorpresa así?
             </IonCardContent>
-            <IonButton fill="outline">CRYSTALBOX</IonButton>
+            <IonButton fill="outline" color={'light'} >CRYSTALBOX</IonButton>
           </IonCard>
         </IonCardContent>
 
@@ -157,7 +157,7 @@ const Tab2: React.FC = () => {
             <IonCardContent>
               <IonCardTitle>¿LISTA PARA VESTIR MEJOR QUE NUNCA</IonCardTitle> 
             </IonCardContent>
-            <IonButton fill="outline">CONOCENOS</IonButton>
+            <IonButton href='' fill="outline" color={'light'}>CONOCENOS</IonButton>
           </IonCard>
         </IonCardContent>
         <IonCardContent className='sectionThree'> 
@@ -177,10 +177,103 @@ const Tab2: React.FC = () => {
                   <IonCardTitle>APROVECHA LO MEJOR DE SER PARTE DE LA COMUNIDAD</IonCardTitle>
                   <IonCardSubtitle>Recibe descuentos de hasta -80% personalizados e invitaciones a sesiones de venta y asesoramiento únicas</IonCardSubtitle>
                 </IonCardContent>
-              <IonButton fill='outline'>SOLICITA INVITACIÓN</IonButton>
+              <IonButton fill='outline' color={'light'}>SOLICITA INVITACIÓN</IonButton>
               </IonCard>
         </IonCardContent>
+        {/* slider */}
+        <IonCardContent>
+          <IonCardTitle>ESCOGE TU OUTFIT PERFECTO</IonCardTitle>
+          <IonCardSubtitle>MODA Y ASESORAMIENTO</IonCardSubtitle>
+          <IonSlides pager={true} options={slideOpts}>
+
+            <IonSlide>
+              <IonRouterLink href='https://crystalbubbleshop.com/coleccion-mujer/accesorios/bisuteria/colgante-plumas-naturales/'>
+                <IonCardContent className='oft1 oft'>
+                  <IonCardTitle>
+                    COLGANTE PLUMAS NATURALES
+                  </IonCardTitle>
+                  <IonCardSubtitle color='secondary-contrast'>
+                    25,00€
+                  </IonCardSubtitle>
+                </IonCardContent>
+              </IonRouterLink>
+            </IonSlide>
+
+            <IonSlide>
+              <IonRouterLink href='https://crystalbubbleshop.com/coleccion-mujer/accesorios/bisuteria/collar-rojo/'>
+                <IonCardContent className='oft2 oft'>
+                  <IonCardTitle>
+                    COLLAR ROJO
+                  </IonCardTitle>
+                  <IonCardSubtitle color='secondary-contrast'>
+                    41,00€
+                  </IonCardSubtitle>
+                </IonCardContent>
+              </IonRouterLink>
+            </IonSlide>
+
+            <IonSlide>
+              <IonRouterLink href='https://crystalbubbleshop.com/coleccion-mujer/accesorios/bisuteria/conjunto-ojo-de-tigre/'>
+                <IonCardContent className='oft3 oft'>
+                  <IonCardTitle>
+                    CONJUNTO OJO DE TIGRE
+                  </IonCardTitle>
+                  <IonCardSubtitle color='secondary-contrast'>
+                    59,00€
+                  </IonCardSubtitle>
+                </IonCardContent>
+              </IonRouterLink>
+            </IonSlide>
+            <IonSlide>
+              <IonRouterLink href='https://crystalbubbleshop.com/coleccion-mujer/accesorios/bisuteria/colgante-y-pulsera-turquesa/'>
+                <IonCardContent className='oft4 oft'>
+                  <IonCardTitle>
+                    PULSERA TURQUESA
+                  </IonCardTitle>
+                  <IonCardSubtitle color='secondary-contrast'>
+                    59,00€
+                  </IonCardSubtitle>
+                </IonCardContent>
+              </IonRouterLink>
+            </IonSlide>
+            <IonSlide>
+              <IonRouterLink href='https://crystalbubbleshop.com/coleccion-mujer/moda-curvy/caja-sorpresa-moda-asesoramiento/'>
+                <IonCardContent className='oft5 oft'>
+                </IonCardContent>
+              </IonRouterLink>
+            </IonSlide>
+          </IonSlides>
+        </IonCardContent>
+
+        {/* show boutique */}
+        <IonCardContent>
+          <IonCardTitle>BOUTIQUE SHOWROOM ONLINE</IonCardTitle>
+          <IonButton href='https://crystalbubbleshop.com/categorias/prendas/'>SHOP NOW</IonButton>
+          <IonGrid>
+            <IonRow className='bshow'>
+              <IonCol>
+                <IonRouterLink href='https://crystalbubbleshop.com/categorias/prendas/'>
+                  <IonCardContent className='bshow1'></IonCardContent>
+                </IonRouterLink>
+                <IonRouterLink href='https://crystalbubbleshop.com/categorias/complementos/bolsos/'>
+                  <IonCardContent className='bshow2'></IonCardContent>
+                </IonRouterLink>
+              </IonCol>
+              <IonCol>
+                <IonRouterLink href='https://crystalbubbleshop.com/categorias/accesorios/bisuteria/'>
+                  <IonCardContent className='bshow3'></IonCardContent>
+                </IonRouterLink>
+                <IonRouterLink href='https://crystalbubbleshop.com/categorias/complementos/fulares-chales/'>
+                  <IonCardContent className='bshow4'></IonCardContent>
+                </IonRouterLink>
+              </IonCol>
+            </IonRow>
+          </IonGrid>
+        </IonCardContent>
+        
+
       </IonContent>
+      
     </IonPage>
   );
 };
