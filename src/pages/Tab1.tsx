@@ -10,13 +10,13 @@ const Tab1: React.FC = () => {
     <IonPage>
       <IonHeader>
         <IonToolbar>
-          <IonTitle>Tab 1</IonTitle>
+          <IonTitle>Tab 2</IonTitle>
         </IonToolbar>
       </IonHeader>
       <IonContent fullscreen className='marg'>
         <IonHeader collapse="condense">
           <IonToolbar>
-            <IonTitle size="large">Tab 1</IonTitle>
+            <IonTitle size="large">Tab 2</IonTitle>
           </IonToolbar>
         </IonHeader>
         <ExploreContainer name="Contenido estático" />

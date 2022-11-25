@@ -42,7 +42,7 @@ const App: React.FC = () => (
     <IonReactRouter>
       <IonTabs>
         <IonRouterOutlet>
-          <Route exact path="/contactos">
+          <Route exact path="/tab1">
             <Tab1 />
           </Route>
           <Route exact path="/home">
@@ -56,7 +56,7 @@ const App: React.FC = () => (
           </Route>
         </IonRouterOutlet>
         <IonTabBar slot="bottom">
-          <IonTabButton tab="contactos" href="/contactos">
+          <IonTabButton tab="contactos" href="/tab1">
             <IonIcon icon={chatbubbles} />
             <IonLabel>Contacto</IonLabel>
           </IonTabButton>
