@@ -1,8 +1,5 @@
 {
-  "name": "AppCB",
-  "integrations": {
-    "capacitor": {}
-  },
-  "type": "react",
-  "id": "86c81b96"
+  "name": "PROY_FINAL_CRYSTAL_BUBBLE",
+  "integrations": {},
+  "type": "react"
 }

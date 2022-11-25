@@ -1,0 +1,13 @@
+.button{
+    padding: 2%;
+    margin-inline: 3%;
+    background-color: transparent;
+}
+
+.selected {
+    background-color: red;
+}
+
+.not-selected{
+    border: solid red 1px;
+}

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 {
   "short_name": "Ionic App",
   "name": "My Ionic App",
@@ -19,3 +20,26 @@
   "theme_color": "#ffffff",
   "background_color": "#ffffff"
 }
+=======
+{
+  "short_name": "Ionic App",
+  "name": "My Ionic App",
+  "icons": [
+    {
+      "src": "assets/icon/favicon.png",
+      "sizes": "64x64 32x32 24x24 16x16",
+      "type": "image/x-icon"
+    },
+    {
+      "src": "assets/icon/icon.png",
+      "type": "image/png",
+      "sizes": "512x512",
+      "purpose": "maskable"
+    }
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#ffffff",
+  "background_color": "#ffffff"
+}
+>>>>>>> 5f9c2d3a077e51ae0235c1b3347daf36a5da60b4
