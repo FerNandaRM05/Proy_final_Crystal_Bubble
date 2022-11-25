@@ -4,6 +4,7 @@ import {
   IonCardTitle,
   IonContent,
   IonLabel,
+  IonImg,
   IonPage,
   IonButton,
   IonSlides,
@@ -20,8 +21,6 @@ import {
 import { Route } from 'react-router-dom';
 
 import './Home.css';
-// iconos de react
-import { playCircleOutline, logoInstagram, logoWhatsapp } from 'ionicons/icons';
 import { Header } from '../components/Header';
 import { IonReactRouter } from '@ionic/react-router';
 
@@ -29,12 +28,10 @@ import Contacto from './Contacto';
 
 const Tab2: React.FC = () => {
 
-  // const slideOpts = {
-  //   initialSlide: 0,
-  //   speed: 2500,
-  //   autoplay: true
-  // };
-
+  const slideOpts = {
+    initialSlide: 0,
+    speed: 2500,
+  };
 
   return (
     <IonPage>
@@ -45,62 +42,74 @@ const Tab2: React.FC = () => {
         </Route>
       </IonReactRouter>
       <IonContent fullscreen={true}>
-        <IonSlides pager={true} options={''}>
 
+        {/* Slider Principal */}
+        <IonSlides pager={true} options={slideOpts}>
           <IonSlide>
+          <IonRouterLink href='https://crystalbubbleshop.com/comunidad-moda/'>
             <IonCardContent className='slider_uno'>
               <IonCardTitle className='title'>Tu talla en tu estilo</IonCardTitle>
-              
-           {/*<IonList>
-                <IonIcon size="large" icon={playCircleOutline} />
-                <IonIcon size="large" icon={logoInstagram} />
-                <IonIcon size="large" icon={logoWhatsapp} />
-              </IonList> */}
-
             </IonCardContent>
+          </IonRouterLink>
           </IonSlide>
 
           <IonSlide>
+            <IonRouterLink href='https://crystalbubbleshop.com/categorias/accesorios/bisuteria/'>
             <IonCardContent className='slider_dos'>
               <IonCardTitle className='title'>Mas que nada Compromiso</IonCardTitle>
             </IonCardContent>
+            </IonRouterLink>
           </IonSlide>
 
           <IonSlide>
-            <IonCardContent className='slider_tres'> 
+            <IonRouterLink href='https://crystalbubbleshop.com/asesoramiento/'>
+            <IonCardContent className='slider_tres'>
               <IonCardTitle className='title'>Asesorarte en Moda</IonCardTitle>
             </IonCardContent>
+            </IonRouterLink>
           </IonSlide>
-            
+
           <IonSlide>
+            <IonRouterLink href='https://crystalbubbleshop.com/coleccion-mujer/moda-curvy/caja-sorpresa-ropa/'>
             <IonCardContent className='slider_cuatro'>
               <IonCardTitle className='title'>Una Caja Muchos Momentos</IonCardTitle>
             </IonCardContent>
+            </IonRouterLink>
           </IonSlide>
-
         </IonSlides>
-        <IonCardTitle className='title'>MODA CRYSTAL BUBBLE TENDENCIAS PRÊT-À-PORTER</IonCardTitle>
-        <IonCardContent className='section dv'>
-          <IonRouterLink  className='card2Nav' href='./tab1'>
-            <IonCardContent className='card2'>
-              <IonCardTitle color={'ligth'}>EXCLUSIVAS</IonCardTitle>
-              <IonLabel>Looks y complementos con estilo</IonLabel>
+
+        {/* Contenido Segundario */}
+        <IonCardHeader className='ion-text-center'>
+          <IonCardTitle>MODA CRYSTAL BUBBLE TENDENCIAS PRÊT-À-PORTER</IonCardTitle>
+        </IonCardHeader>
+        <div className='section'>
+
+          <IonCard className='card1'>
+            <IonImg src='./img/card2.webp' />
+            <IonCardContent className='ion-text-center'>
+              <IonCardTitle>MUJER PETITE</IonCardTitle>
+              <IonButton href='https://crystalbubbleshop.com/categorias/moda-petite/' shape='round'>Ver mas</IonButton>
             </IonCardContent>
-          </IonRouterLink>
-          <IonRouterLink className='card1Nav' href=''>
-            <IonCardContent className='card1'>
-              <IonCardTitle color={'ligth'}>MUJER PETITE</IonCardTitle>
-              <IonLabel>Viste elegante y combina a tu aire</IonLabel>
+          </IonCard>
+
+          <IonCard className='card2'>
+            <IonImg src='./img/card1.webp' />
+            <IonCardContent className='ion-text-center'>
+              <IonCardTitle>EXCLUSIVAS</IonCardTitle>
+              <IonButton href='https://crystalbubbleshop.com/categorias/mis-especiales/' shape='round'>Ver mas</IonButton>
             </IonCardContent>
-          </IonRouterLink>
-          <IonRouterLink className='card3Nav' href='' >
-            <IonCardContent className='card3' >
-                <IonCardTitle color={'ligth'}>MUJER CURVY</IonCardTitle>
-                <IonLabel>Selección Curve & Plus Size</IonLabel>
+          </IonCard>
+
+          <IonCard className='card3'>
+            <IonImg src='./img/card3.webp' />
+            <IonCardContent className='ion-text-center'>
+              <IonCardTitle>MUJER CURVY</IonCardTitle>
+              <IonButton href='https://crystalbubbleshop.com/categorias/moda-curvy/' shape='round'>Ver mas</IonButton>
             </IonCardContent>
-          </IonRouterLink>
-        </IonCardContent>
-        <IonCardContent className='banner dv'>
+          </IonCard>
+
+        </div>
+        <IonCardContent className='banner'>
           <IonCard color={'primary'}>
             <IonCardContent>
               <IonCardTitle>
