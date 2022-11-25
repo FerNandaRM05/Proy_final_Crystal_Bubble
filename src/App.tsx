@@ -1,6 +1,6 @@
 import { Redirect, Route } from 'react-router-dom';
 import { IonReactRouter } from '@ionic/react-router';
-import { ellipse, square, triangle, home, chatbubbles, bagHandle } from 'ionicons/icons';
+import {  home, chatbubbles, gridOutline } from 'ionicons/icons';
 import Tab1 from './pages/Tab1';
 import Tab2 from './pages/Tab2';
 import Tab3 from './pages/Tab3';
@@ -52,10 +52,10 @@ const App: React.FC = () => (
             <Tab1/>
           </Route>
           <Route exact path="/tab2">
-            <Estatic />
+            <Tab2 />
           </Route>
           <Route path="/tab3">
-            <Tab3 />
+          <Estatic />
           </Route>
           <Route exact path="/">
             <Redirect to="/tab2" />
@@ -74,8 +74,8 @@ const App: React.FC = () => (
             <IonLabel>Inicio</IonLabel>
           </IonTabButton>
           <IonTabButton tab="tab3" href="/tab3">
-            <IonIcon icon={bagHandle} />
-            <IonLabel>Tienda</IonLabel>
+            <IonIcon icon={gridOutline} />
+            <IonLabel>Menú</IonLabel>
           </IonTabButton>
         </IonTabBar>
       </IonTabs>
