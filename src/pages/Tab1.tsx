@@ -10,7 +10,7 @@ const Tab1: React.FC = () => {
       <IonContent fullscreen className='marg'>
         <IonHeader collapse="condense">
           <IonToolbar>
-            <IonTitle size="large">Tab 1</IonTitle>
+            <IonTitle size="large">Tab 2</IonTitle>
           </IonToolbar>
         </IonHeader>
         <ExploreContainer name="Contenido estático" />

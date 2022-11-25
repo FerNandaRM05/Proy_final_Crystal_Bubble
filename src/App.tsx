@@ -2,7 +2,7 @@ import { Redirect, Route } from 'react-router-dom';
 import { IonReactRouter } from '@ionic/react-router';
 import {  home, chatbubbles, gridOutline } from 'ionicons/icons';
 import Tab1 from './pages/Tab1';
-import Tab2 from './pages/Tab2';
+import Home from './pages/Home';
 import Tab3 from './pages/Tab3';
 import { IonContent, IonPage, IonTitle, IonToolbar, IonApp, IonHeader, IonIcon, IonLabel, IonRouterOutlet, IonTabBar, IonTabButton, IonTabs, setupIonicReact } from '@ionic/react';
 import icono from "./img/icon.png";
@@ -35,41 +35,28 @@ setupIonicReact();
 
 const App: React.FC = () => (
   <IonApp>
-    <IonHeader>
-        <IonToolbar>
-          <IonTitle id='titulo'>
-            <div id='bar'>
-              <img src={icono} width={"20%"}></img>
-              <img src={traducir} width={"20%"} id="traducir"></img>
-            </div>
-          </IonTitle>
-        </IonToolbar>
-      </IonHeader>
     <IonReactRouter>
       <IonTabs>
         <IonRouterOutlet>
           <Route exact path="/tab1">
             <Tab1/>
           </Route>
-          <Route exact path="/tab2">
-            <Tab2 />
+          <Route exact path="/home">
+            <Home />
           </Route>
           <Route path="/tab3">
-          <Estatic />
+            <Estatic />
           </Route>
           <Route exact path="/">
-            <Redirect to="/tab2" />
-          </Route>
-          <Route path="/blog">
-            <BlogPage/>
+            <Redirect to="/tab1" />
           </Route>
         </IonRouterOutlet>
         <IonTabBar slot="bottom">
-          <IonTabButton tab="tab1" href="/tab1">
+          <IonTabButton tab="contactos" href="/tab1">
             <IonIcon icon={chatbubbles} />
             <IonLabel>Contacto</IonLabel>
           </IonTabButton>
-          <IonTabButton tab="tab2" href="/tab2">
+          <IonTabButton tab="home" href="/home">
             <IonIcon icon={home}/>
             <IonLabel>Inicio</IonLabel>
           </IonTabButton>
