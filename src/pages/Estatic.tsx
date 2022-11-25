@@ -47,6 +47,11 @@ const Estatic: React.FC = () => {
                 <p>Contra el cáncer</p>
               </div>
             </a>
+            <a href="/blog">
+              <div id="blog" className='tarjeta'>
+                <p>Blog</p>
+              </div>
+            </a>
           </div>
         </div>
       </IonContent>
