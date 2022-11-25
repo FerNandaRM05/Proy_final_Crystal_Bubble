@@ -9,7 +9,7 @@ import contraCancer from "./img/contra-cancer.webp";
 const Estatic: React.FC = () => {
   return (
     <IonPage>
-      <IonHeader>
+      <IonHeader color='secundary-'>
         <IonToolbar>
           <IonTitle>Estatico</IonTitle>
         </IonToolbar>

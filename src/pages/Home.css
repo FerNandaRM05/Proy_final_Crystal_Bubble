@@ -1,5 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@500&display=swap');
-
+.dv{
+    padding: 0;
+    border-radius: 0;
+}
 .section {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -8,6 +11,7 @@
     margin: 0;
     color: white;
     text-align: center;
+    padding: 0;
 }
 
 ion-card {
@@ -99,10 +103,7 @@ ion-grid{
         justify-items: center;
     }
 }
-.dv{
-    padding: 0;
-    border-radius: 0;
-}
+
 .card1 {
     position: relative;
     grid-column: 3/4;

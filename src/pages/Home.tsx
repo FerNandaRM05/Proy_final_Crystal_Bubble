@@ -36,12 +36,7 @@ const Tab2: React.FC = () => {
   return (
     <IonPage>
       <Header />
-      <IonReactRouter>
-        <Route exact path={'/contactos'}>
-          <Contacto/>
-        </Route>
-      </IonReactRouter>
-      <IonContent fullscreen={true}>
+      <IonContent fullscreen={true} >
 
         {/* Slider Principal */}
         <IonSlides pager={true} options={slideOpts}>

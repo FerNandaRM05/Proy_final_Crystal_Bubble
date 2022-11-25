@@ -35,16 +35,6 @@ setupIonicReact();
 
 const App: React.FC = () => (
   <IonApp>
-    <IonHeader>
-        <IonToolbar>
-          <IonTitle id='titulo'>
-            <div id='bar'>
-              <img src={icono} width={"20%"}></img>
-              <img src={traducir} width={"20%"} id="traducir"></img>
-            </div>
-          </IonTitle>
-        </IonToolbar>
-      </IonHeader>
     <IonReactRouter>
       <IonTabs>
         <IonRouterOutlet>

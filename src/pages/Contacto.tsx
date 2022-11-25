@@ -2,22 +2,15 @@ import { IonContent, IonHeader, IonIcon, IonPage, IonTitle, IonToolbar } from '@
 import { logoInstagram, logoYoutube, logoTiktok, locationOutline, logoLinkedin } from 'ionicons/icons';
 import React from 'react';
 import './Tab1.css';
+import { Header } from '../components/Header';
 
 
 const Estatic: React.FC = () => {
   return (
     <IonPage>
-      <IonHeader>
-        <IonToolbar>
-          <IonTitle></IonTitle>
-        </IonToolbar>
-      </IonHeader>
+      <Header/>
       <IonContent fullscreen>
-        <IonHeader collapse="condense">
-          <IonToolbar>
-            <IonTitle size="large">Tab 1</IonTitle>
-          </IonToolbar>
-        </IonHeader>
+        
         <div>
             <div className='containerPhoto'>
             </div>
