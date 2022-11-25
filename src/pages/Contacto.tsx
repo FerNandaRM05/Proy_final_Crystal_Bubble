@@ -10,7 +10,7 @@ const Estatic: React.FC = () => {
     <IonPage>
       <IonHeader>
         <IonToolbar>
-          <IonTitle>Contáctanos</IonTitle>
+          <IonTitle></IonTitle>
         </IonToolbar>
       </IonHeader>
       <IonContent fullscreen>

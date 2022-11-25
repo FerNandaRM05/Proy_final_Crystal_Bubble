@@ -5,8 +5,10 @@ import Tab1 from './pages/Tab1';
 import Tab2 from './pages/Tab2';
 import Tab3 from './pages/Tab3';
 import { IonContent, IonPage, IonTitle, IonToolbar, IonApp, IonHeader, IonIcon, IonLabel, IonRouterOutlet, IonTabBar, IonTabButton, IonTabs, setupIonicReact } from '@ionic/react';
-
+import icono from "./img/icon.png";
+import traducir from "./img/translate.png";
 import "./App.css";
+import Estatic from "./pages/Estatic";
 
 /* Core CSS required for Ionic components to work properly */
 import '@ionic/react/css/core.css';
@@ -36,8 +38,8 @@ const App: React.FC = () => (
         <IonToolbar>
           <IonTitle id='titulo'>
             <div id='bar'>
-              <img src="" width={"20%"}></img>
-              <img src="" width={"20%"} id="traducir"></img>
+              <img src={icono} width={"20%"}></img>
+              <img src={traducir} width={"20%"} id="traducir"></img>
             </div>
           </IonTitle>
         </IonToolbar>
@@ -49,7 +51,7 @@ const App: React.FC = () => (
             <Tab1/>
           </Route>
           <Route exact path="/tab2">
-            <Tab2 />
+            <Estatic />
           </Route>
           <Route path="/tab3">
             <Tab3 />
