@@ -176,7 +176,7 @@ const Tab2: React.FC = () => {
               </IonCard>
         </IonCardContent>
         {/* slider */}
-        <IonCardContent>
+        <IonCardContent className='dv'>
           <IonCardTitle>ESCOGE TU OUTFIT PERFECTO</IonCardTitle>
           <IonCardSubtitle>MODA Y ASESORAMIENTO</IonCardSubtitle>
           <IonSlides pager={true} options={slideOpts}>
@@ -241,7 +241,7 @@ const Tab2: React.FC = () => {
         </IonCardContent>
 
         {/* show boutique */}
-        <IonCardContent>
+        <IonCardContent className=''>
           <IonCardTitle>BOUTIQUE SHOWROOM ONLINE</IonCardTitle>
           <IonButton href='https://crystalbubbleshop.com/categorias/prendas/'>SHOP NOW</IonButton>
           <IonGrid>

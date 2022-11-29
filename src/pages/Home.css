@@ -2,6 +2,7 @@
 .dv{
     padding: 0;
     border-radius: 0;
+    text-align: center;
 }
 .section {
     display: grid;
@@ -413,3 +414,4 @@ en un futuro por separado */
     height: 25vh;
     margin-bottom: 10px;
 }
+/*  */
