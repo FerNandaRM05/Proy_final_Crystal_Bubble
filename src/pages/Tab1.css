@@ -22,6 +22,7 @@
 #formulario
 {
     margin: 2rem;
+    
 }
 #enviar
 {
@@ -102,6 +103,7 @@ a
 .containerContent
 {
     margin-top: 3rem;
+    padding: 0 1rem;
 }
 
 #corporate
@@ -140,4 +142,17 @@ a
     background-image: url("https://crystalbubbleshop.com/wp-content/uploads/2020/08/tomar-el-control-armario-moda-curvy-crystal-bubble-boutique-768x315.jpg");
     background-size: cover;
     background-position: bottom;
+}
+
+#divFormulario
+{
+    background-color: #6C4F78;
+    padding: 1rem 0.5rem;
+    border-radius: 1rem;
+    color: white;
+}
+
+iframe
+{
+    border-style: none;
 }
