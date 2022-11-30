@@ -43,7 +43,7 @@ const Tab2: React.FC = () => {
           <IonSlide>
           <IonRouterLink href='https://crystalbubbleshop.com/comunidad-moda/'>
             <IonCardContent className='slider_uno'>
-              <IonCardTitle className='title'>Tu talla en tu estilo</IonCardTitle>
+              <IonCardTitle className='title'>TU TALLA EN TU ESTILO</IonCardTitle>
             </IonCardContent>
           </IonRouterLink>
           </IonSlide>
@@ -51,7 +51,7 @@ const Tab2: React.FC = () => {
           <IonSlide>
             <IonRouterLink href='https://crystalbubbleshop.com/categorias/accesorios/bisuteria/'>
             <IonCardContent className='slider_dos'>
-              <IonCardTitle className='title'>Mas que nada Compromiso</IonCardTitle>
+              <IonCardTitle className='title'>MAS QUE NADA COMPROMISO</IonCardTitle>
             </IonCardContent>
             </IonRouterLink>
           </IonSlide>
@@ -59,7 +59,7 @@ const Tab2: React.FC = () => {
           <IonSlide>
             <IonRouterLink href='https://crystalbubbleshop.com/asesoramiento/'>
             <IonCardContent className='slider_tres'>
-              <IonCardTitle className='title'>Asesorarte en Moda</IonCardTitle>
+              <IonCardTitle className='title'>ASESORARTE EN MODA</IonCardTitle>
             </IonCardContent>
             </IonRouterLink>
           </IonSlide>
@@ -67,7 +67,7 @@ const Tab2: React.FC = () => {
           <IonSlide>
             <IonRouterLink href='https://crystalbubbleshop.com/coleccion-mujer/moda-curvy/caja-sorpresa-ropa/'>
             <IonCardContent className='slider_cuatro'>
-              <IonCardTitle className='title'>Una Caja Muchos Momentos</IonCardTitle>
+              <IonCardTitle className='title'>UNA CAJA MUCHOS MOMENTOS</IonCardTitle>
             </IonCardContent>
             </IonRouterLink>
           </IonSlide>
@@ -79,24 +79,21 @@ const Tab2: React.FC = () => {
         </IonCardHeader>
         <IonCardContent className='section'>
 
-          <IonCard className='card1'>
-            <IonImg src='./img/card2.webp' />
+          <IonCard className='card1 tnd1'>
             <IonCardContent className='ion-text-center'>
               <IonCardTitle color='secondary-contrast' >MUJER PETITE</IonCardTitle>
               <IonButton href='https://crystalbubbleshop.com/categorias/moda-petite/' shape='round'>Ver mas</IonButton>
             </IonCardContent>
           </IonCard>
 
-          <IonCard className='card2'>
-            <IonImg src='./img/card1.webp' />
+          <IonCard className='card2 tnd'>
             <IonCardContent className='ion-text-center'>
               <IonCardTitle color='secondary-contrast'>EXCLUSIVAS</IonCardTitle>
               <IonButton href='https://crystalbubbleshop.com/categorias/mis-especiales/' shape='round'>Ver mas</IonButton>
             </IonCardContent>
           </IonCard>
 
-          <IonCard className='card3'>
-            <IonImg src='./img/card3.webp' />
+          <IonCard className='card3 tnd2'>
             <IonCardContent className='ion-text-center'>
               <IonCardTitle color='secondary-contrast'>MUJER CURVY</IonCardTitle>
               <IonButton href='https://crystalbubbleshop.com/categorias/moda-curvy/' shape='round'>Ver mas</IonButton>
@@ -155,17 +152,23 @@ const Tab2: React.FC = () => {
             <IonButton href='' fill="outline" color={'light'}>CONOCENOS</IonButton>
           </IonCard>
         </IonCardContent>
+
         <IonCardContent className='sectionThree'> 
           <IonCardTitle className='title'>Asesorate y  Tranforma tu Imagen</IonCardTitle>
-          <IonCardContent>
+
+        <IonCardContent className='Asr'>
+          <IonCardContent className='asr1'>
             <IonCard color={'light'} className='card6'>ASESORAMIENTO EN MODA</IonCard>
-            <IonCard color={'light'} className='card7'>TRANSFORMA TU IMAGEN</IonCard>
-          </IonCardContent>
-          <IonCardContent>
             <IonButton>Pedir Cita</IonButton>
+          </IonCardContent>
+
+          <IonCardContent className='asr2'>
+          <IonCard color={'light'} className='card7'>TRANSFORMA TU IMAGEN</IonCard>
             <IonButton>Reservar</IonButton>
           </IonCardContent>
         </IonCardContent>
+      </IonCardContent>
+
         <IonCardContent className='banner dv'>
               <IonCard color={'primary'}>
                 <IonCardContent>
@@ -176,6 +179,7 @@ const Tab2: React.FC = () => {
               </IonCard>
         </IonCardContent>
         {/* slider */}
+      <IonCardContent>
         <IonCardContent className='dv'>
           <IonCardTitle>ESCOGE TU OUTFIT PERFECTO</IonCardTitle>
           <IonCardSubtitle>MODA Y ASESORAMIENTO</IonCardSubtitle>
@@ -265,6 +269,7 @@ const Tab2: React.FC = () => {
             </IonRow>
           </IonGrid>
         </IonCardContent>
+      </IonCardContent>
         
 
       </IonContent>
