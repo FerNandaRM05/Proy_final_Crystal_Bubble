@@ -68,7 +68,7 @@ const App: React.FC = () => {
           </Route>
           <Route exact path="/instrucciones">
             <Instrucciones
-            setHelp={setHelp} />
+              setHelp={setHelp}/>
           </Route>
         </IonRouterOutlet>
         <IonTabBar  slot="bottom">
