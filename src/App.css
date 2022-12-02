@@ -8,8 +8,10 @@
     display: flex;
     justify-content: space-between;
     margin: 0;
+    background-color: #23272F
 }
 #traducir
 {
     padding: 10px;
 }
+

@@ -4,6 +4,7 @@ import { ellipse, square, triangle, home, chatbubbles, bagHandle } from 'ionicon
 import Tab1 from './pages/Tab1';
 import Tab2 from './pages/Tab2';
 import Tab3 from './pages/Tab3';
+import logo from './img/icon.png'
 import { IonContent, IonPage, IonTitle, IonToolbar, IonApp, IonHeader, IonIcon, IonLabel, IonRouterOutlet, IonTabBar, IonTabButton, IonTabs, setupIonicReact } from '@ionic/react';
 
 import "./App.css";
@@ -27,23 +28,27 @@ import '@ionic/react/css/display.css';
 /* Theme variables */
 import './theme/variables.css';
 import React from 'react';
+import SettingComponent from './components/SettingComponent';
+import OptionsSetting from './components/OptionsSetting';
 
 setupIonicReact();
 
 const App: React.FC = () => (
   <IonApp>
     <IonHeader>
-        <IonToolbar>
+      <OptionsSetting />
+        <IonToolbar>          
           <IonTitle id='titulo'>
             <div id='bar'>
               <img src="" width={"20%"}></img>
-              <img src="" width={"20%"} id="traducir"></img>
+              <SettingComponent />              
             </div>
           </IonTitle>
         </IonToolbar>
       </IonHeader>
     <IonReactRouter>
       <IonTabs>
+        <OptionsSetting />
         <IonRouterOutlet>
           <Route exact path="/tab1">
             <Tab1/>
