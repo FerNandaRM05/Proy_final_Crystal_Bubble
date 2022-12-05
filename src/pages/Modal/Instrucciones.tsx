@@ -43,11 +43,13 @@ const Instrucciones = ({ setHelp }: { setHelp: React.Dispatch<React.SetStateActi
     }
 
     const handleClick2 = () => {
+        
+        setPaginaActual(paginaActual - 1)
 
         if (paginaActual == 3) {
             setHelp(false);
         }
-        setPaginaActual(paginaActual - 1)
+        
     }
 
 
@@ -65,11 +67,11 @@ const Instrucciones = ({ setHelp }: { setHelp: React.Dispatch<React.SetStateActi
                             <div className='ContainText'>
                                 <h2 className='title'>{pagina.titulo}</h2>
                                 <p className='text'>{pagina.texto}</p>
-                                <div className='buttons'>
-                                    <a className='b1' onClick={() => setHelp(false)}>Saltar</a>
-                                    <button className='b2' onClick={handleClick2}>Anterior</button>
+                                <div className='buttons'>                           
+                                    <button onClick={handleClick2} className={paginaActual==1 ? 'b3': 'b2'}>Anterior</button>
                                     <button className='b2' onClick={handleClick}>Siguiente</button>
                                 </div>
+                                <a className='b1' onClick={() => setHelp(false)}>Saltar</a>
                             </div>
 
                         </>
