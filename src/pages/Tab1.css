@@ -5,6 +5,10 @@
     font-family: "Josefin Sans", sans-serif;
 }
 
+.contenido
+{
+    margin: 0;
+}
 .input
 {
     display: flex;

@@ -2,16 +2,18 @@
 .dv{
     padding: 0;
     border-radius: 0;
+    text-align: center;
 }
 .section {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: 1fr 1fr;
-    gap: 1em;
-    margin: 0;
+    /* grid-template-columns: repeat(3, 1fr); */
+    /* grid-template-rows: 1fr 1fr; */
+    /* gap: 1em; */
+    /* margin: 0; */
     color: white;
-    text-align: center;
-    padding: 0;
+    /* text-align: center; */
+    /* padding: 0; */
+    column-gap: 2%;
 }
 
 ion-card {
@@ -24,78 +26,7 @@ ion-grid{
     text-align: center;
     margin: 5px;
 }
-/* .card1Nav{
-    grid-column:1/3 ;
-    grid-row:1/3 ;
-    background-image: url('https://crystalbubbleshop.com/wp-content/uploads/2021/08/boutique-online-barcelona-petite.png');
-    background-size:100% 100%;
-    background-position: center center;
-    background-repeat: no-repeat;
-}
-.card1{
-    width: 100%;
-    height: 50vh;
-    padding: 0%;
-    font-size: 1rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    color: white;
-}
-.card1 ion-card-title{
-    font-size: 1.5rem;
-    font-weight: 500;
-    font-family: 'Josefin Sans', sans-serif;
-    text-shadow: 3px 3px 5px rgba(150, 150, 150, 1);
-}
-.card2Nav{
-    grid-column:3/4 ;
-    grid-row: 1/2;
-    background-image: url('https://crystalbubbleshop.com/wp-content/uploads/2022/02/exclusivas-moda-mujer-crystal-bubble-boutique.png');
-    background-size: 100% 100%;
-    background-position: center center;
-    background-repeat: no-repeat;
-}
-.card2{
-    width: 100%;
-    padding: 3px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    color: white;
-}
-.card2 ion-card-title{
-    font-size: 1.2rem;
-    font-weight: 500;
-    font-family: 'Josefin Sans', sans-serif;
-    text-shadow: 3px 3px 5px rgba(150, 150, 150, 1);
-}
-.card3Nav{
-    grid-column:3/4 ;
-    grid-row:2/3 ;
-    background-image: url('https://crystalbubbleshop.com/wp-content/uploads/2021/08/boutique-online-barcelona-curvy.png');
-    background-size: 100% 100%;
-    background-position: center center;
-    background-repeat: no-repeat;
-}
-.card3{
-    width: 100%;
-    height: auto;
-    padding: 10px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    color: white;
-}
-.card3 ion-card-title{
-    font-size: 1rem;
-    font-weight: 500;
-    font-family: 'Josefin Sans', sans-serif;
-    text-shadow: 3px 3px 5px rgba(150, 150, 150, 1);
-} */
+
 @media (min-width:700px){
     .section{
         display: flex;
@@ -132,6 +63,24 @@ ion-grid{
 .card3 ion-card-content {
     color: white;
     text-shadow: 3px 3px 5px rgb(81, 78, 78);
+}
+
+.tnd{
+    background-image: url('https://crystalbubbleshop.com/wp-content/uploads/2021/08/boutique-online-barcelona-petite.png');
+    background-size: cover;
+    height: 35.5vh;
+}
+
+.tnd1{
+    background-image: url('https://crystalbubbleshop.com/wp-content/uploads/2022/02/exclusivas-moda-mujer-crystal-bubble-boutique.png');
+    background-size: cover;
+    height: 17.2vh;
+    margin-bottom: 10px;
+}
+.tnd2{
+    background-image: url('https://crystalbubbleshop.com/wp-content/uploads/2021/08/boutique-online-barcelona-curvy.png');
+    background-size: cover;
+    height: 17.2vh;
 }
 
 .section ion-card-content {
@@ -282,8 +231,8 @@ ion-row{
     font-size: 1rem;
     text-shadow: 3px 3px 5px rgba(150, 150, 150, 1);
     color: white;
-    height: 40vh;
-    width: 50%;
+    height: 30vh;
+    width: 95%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -294,16 +243,23 @@ ion-row{
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
-    border-radius: 0;
-    margin-right: 2.5px;
 }
 .card7{
     background: url('https://crystalbubbleshop.com/wp-content/uploads/2022/02/crystal-bubble-boutique-showroom-online-barcelona.png');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
-    border-radius: 0;
-    margin-left: 2.5px;
+}
+.Asr{
+    flex-direction: row;
+}
+.asr1{
+    display: flex;
+    flex-direction: column;
+}
+.asr2{
+    display: flex;
+    flex-direction: column;
 }
 
 /* Comienzo de slider de outfits */
@@ -383,7 +339,7 @@ en un futuro por separado */
     background-repeat: no-repeat;
     background-position: center;
     width: 100%;
-    height: 25vh;
+    height: 20vh;
     margin-bottom: 10px;
 }
 .bshow2{
@@ -392,7 +348,7 @@ en un futuro por separado */
     background-repeat: no-repeat;
     background-position: center;
     width: 100%;
-    height: 25vh;
+    height: 20vh;
     margin-bottom: 10px;
 }
 .bshow3{
@@ -401,7 +357,7 @@ en un futuro por separado */
     background-repeat: no-repeat;
     background-position: center;
     width: 100%;
-    height: 25vh;
+    height: 20vh;
     margin-bottom: 10px;
 }
 .bshow4{
@@ -410,6 +366,7 @@ en un futuro por separado */
     background-repeat: no-repeat;
     background-position: center;
     width: 100%;
-    height: 25vh;
+    height: 20vh;
     margin-bottom: 10px;
 }
+/*  */

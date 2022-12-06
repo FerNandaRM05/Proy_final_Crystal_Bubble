@@ -1,11 +1,13 @@
-import { IonHeader, IonIcon, IonImg } from "@ionic/react";
+import { IonAvatar, IonHeader, IonIcon, IonImg, IonToolbar } from "@ionic/react";
 
 import './Header.css';
 
-export const Header:React.FC = () => {
-    return(
+export const Header: React.FC = () => {
+    return (
         <IonHeader className="header">
-            <IonImg className="img" src="./img/logo2.png" />
+            <IonToolbar>
+                    <IonImg className="img" slot="start" src="./img/logo2.png" /> 
+            </IonToolbar>
         </IonHeader>
     );
 };
