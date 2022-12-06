@@ -1,0 +1,154 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap');
+
+*
+{
+    font-family: "Josefin Sans", sans-serif;
+}
+
+.input
+{
+    display: flex;
+    flex-direction: column;
+}
+.containerContent
+{
+    top: 56px;
+    margin-bottom: 5rem;
+}
+#formulario
+{
+    margin: 2rem;
+    
+}
+#enviar
+{
+    text-align: center;
+}
+#enviar > button
+{
+    padding: 1rem;
+    color: white;
+    background-color: black;
+}
+#enviar > button:active
+{
+    color: black;
+    background-color: white;
+}
+#divRedes
+{
+    margin: 2rem;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+.labels
+{
+    font-size: medium;
+}
+#divRedes > *
+{
+    font-size: xx-large;
+    border: .1rem solid  #6C4F78;
+    padding: .5rem;
+    color: #6C4F78;
+    border-radius: 25px;
+    height: 50px;
+}
+#divRedes > *:active
+{
+    color: #71328B;
+    border: .1rem solid #71328B;
+}
+#divMapa
+{
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: space-around;
+    text-align: center;
+}
+#mapa
+{
+    width: 100%;
+    min-height: 15rem;
+}
+
+.tarjeta
+{
+    width: 90vw;
+    height: 11rem;
+    margin: 1rem;
+    text-align: center;
+}
+.tarjeta > *
+{
+    height: 10rem;
+    padding: 3.9rem;
+    vertical-align: middle;
+    font-size: 2.5rem;
+    font-weight: bold;
+    -webkit-text-stroke: .9px rgb(255, 255, 255, 0.7);
+}
+
+a
+{
+    text-decoration: none;
+    color: inherit;
+}
+
+.containerContent
+{
+    margin-top: 3rem;
+    padding: 0 1rem;
+}
+
+#corporate
+{
+    background-image: url("https://crystalbubbleshop.com/wp-content/uploads/2021/10/click-and-collect-crystal-bubble-boutique-barcelona.png");
+    background-size: cover;
+}
+
+#comunidad
+{
+    background-image: url("https://crystalbubbleshop.com/wp-content/uploads/2021/04/crystal-bubble-boutique.png");
+    background-size: cover;
+    background-position: 0 -50px;
+}
+
+#ventaprivada
+{
+    background-image: url("https://crystalbubbleshop.com/wp-content/uploads/2021/12/crystal-bubble-boutique-venta-privada.png");
+    background-size: cover;
+}
+#blackfriday
+{
+    background-image: url("https://crystalbubbleshop.com/wp-content/uploads/2022/09/Black-Friday-Crystal-Bubble-Barcelona-1536x1097.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: bottom;
+}
+#contracancer
+{
+    background-image: url("https://crystalbubbleshop.com/wp-content/uploads/2019/12/collar-talisman-negro.png");
+    background-size: cover;
+    background-position: bottom;
+}
+#blog
+{
+    background-image: url("https://crystalbubbleshop.com/wp-content/uploads/2020/08/tomar-el-control-armario-moda-curvy-crystal-bubble-boutique-768x315.jpg");
+    background-size: cover;
+    background-position: bottom;
+}
+
+#divFormulario
+{
+    background-color: #6C4F78;
+    padding: 1rem 0.5rem;
+    border-radius: 1rem;
+    color: white;
+}
+
+iframe
+{
+    border-style: none;
+}
