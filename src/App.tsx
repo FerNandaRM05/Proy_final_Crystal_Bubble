@@ -37,13 +37,16 @@ setupIonicReact();
 
 
 const App: React.FC = () => {
-
-  localStorage.setItem('user', 'Hola')
+  
   const [help, setHelp] = useState(true)
+  let ins = localStorage.getItem('user');
 
-  if (help) {
+  if (ins == null && help) {
+    
+
     return <Instrucciones 
     setHelp={setHelp}/>
+    
   }
 
   return (<IonApp>
@@ -63,7 +66,7 @@ const App: React.FC = () => {
             <BlogPage />
           </Route>
           <Route exact path="/">
-            <Redirect to="/home" />
+            <Redirect to="/home"/>
           </Route>
           <Route exact path="/instrucciones">
             <Instrucciones
@@ -75,7 +78,7 @@ const App: React.FC = () => {
             <IonIcon icon={chatbubbles} />
             <IonLabel>Contacto</IonLabel>
           </IonTabButton>
-          <IonTabButton tab="tab2" href="/tab2">
+          <IonTabButton tab="Home" href="/Home">
             <IonIcon icon={home} />
             <IonLabel>Inicio</IonLabel>
           </IonTabButton>

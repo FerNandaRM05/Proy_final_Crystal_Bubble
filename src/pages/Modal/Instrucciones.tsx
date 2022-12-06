@@ -11,9 +11,9 @@ const Instrucciones = ({ setHelp }: { setHelp: React.Dispatch<React.SetStateActi
     let activo = true;
     let [paginaActual, setPaginaActual] = useState(1);
 
-//Array de objetos
-/*Si se desean cambiar los textos o imagenes es en esta sección que se puede realizar, se puede modificar 
-los elementos titulo, texto e imagen.*/
+    //Array de objetos
+    /*Si se desean cambiar los textos o imagenes es en esta sección que se puede realizar, se puede modificar 
+    los elementos titulo, texto e imagen.*/
     let paginas = [
         {
             pagina: 1,
@@ -36,11 +36,12 @@ los elementos titulo, texto e imagen.*/
         }
     ]
 
-//métodos de los botones
+    //métodos de los botones
     const handleClick = () => {
 
         if (paginaActual == 3) {
             setHelp(false);
+            localStorage.setItem('user', 'Hola')
         }
         setPaginaActual(paginaActual + 1)
     }
@@ -51,11 +52,12 @@ los elementos titulo, texto e imagen.*/
 
         if (paginaActual == 4) {
             setHelp(false);
+            
         }
-        
+
     }
 
-//contenido de las páginas
+    //contenido de las páginas
     return (
         <Modal className='modal'>
             {paginas.map((pagina) => {
@@ -70,12 +72,15 @@ los elementos titulo, texto e imagen.*/
                             <div className='ContainText'>
                                 <h2 className='title'>{pagina.titulo}</h2>
                                 <p className='text'>{pagina.texto}</p>
-                                <div className='buttons'>                           
-                                    <button onClick={handleClick2} className={paginaActual==1 ? 'b3': 'b2'}>Anterior</button>
-                                    <button onClick={handleClick} className={paginaActual==3 ? 'b4' : 'b2'}>Siguiente</button>
-                                    <button onClick={handleClick} className={paginaActual==3 ? 'b2' : 'b4'}>Finalizar</button>
+                                <div className='buttons'>
+                                    <button onClick={handleClick2} className={paginaActual == 1 ? 'b3' : 'b2'}>Anterior</button>
+                                    <button onClick={handleClick} className={paginaActual == 3 ? 'b4' : 'b2'}>Siguiente</button>
+                                    <button onClick={handleClick} className={paginaActual == 3 ? 'b2' : 'b4'}>Finalizar</button>
                                 </div>
-                                <a className='b1' onClick={() => setHelp(false)}>Saltar</a>
+                                <a className='b1' onClick={() => {
+                                    setHelp(false)
+                                    localStorage.setItem('user', 'Hola')
+                                }}>Saltar</a>
                             </div>
 
                         </>
