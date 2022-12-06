@@ -4,6 +4,7 @@ import {  home, chatbubbles, gridOutline } from 'ionicons/icons';
 import Tab1 from './pages/Tab1';
 import Home from './pages/Home';
 import Tab3 from './pages/Tab3';
+import Instrucciones from './pages/Modal/Instrucciones';
 import { IonContent, IonPage, IonTitle, IonToolbar, IonApp, IonHeader, IonIcon, IonLabel, IonRouterOutlet, IonTabBar, IonTabButton, IonTabs, setupIonicReact } from '@ionic/react';
 import icono from "./img/icon.png";
 import traducir from "./img/translate.png";
@@ -28,13 +29,24 @@ import '@ionic/react/css/display.css';
 
 /* Theme variables */
 import './theme/variables.css';
-import React from 'react';
+import React, { useState } from 'react';
 import BlogPage from './pages/BlogPage';
 
 setupIonicReact();
 
-const App: React.FC = () => (
-  <IonApp>
+
+
+const App: React.FC = () => {
+
+  localStorage.setItem('user', 'Hola')
+  const [help, setHelp] = useState(true)
+
+  if (help) {
+    return <Instrucciones 
+    setHelp={setHelp}/>
+  }
+
+  return (<IonApp>
     <IonReactRouter>
       <IonTabs>
         <IonRouterOutlet>
@@ -53,14 +65,18 @@ const App: React.FC = () => (
           <Route exact path="/">
             <Redirect to="/home" />
           </Route>
+          <Route exact path="/instrucciones">
+            <Instrucciones
+              setHelp={setHelp}/>
+          </Route>
         </IonRouterOutlet>
         <IonTabBar slot="bottom">
           <IonTabButton tab="contactos" href="/tab1">
             <IonIcon icon={chatbubbles} />
             <IonLabel>Contacto</IonLabel>
           </IonTabButton>
-          <IonTabButton tab="home" href="/home">
-            <IonIcon icon={home}/>
+          <IonTabButton tab="tab2" href="/tab2">
+            <IonIcon icon={home} />
             <IonLabel>Inicio</IonLabel>
           </IonTabButton>
           <IonTabButton tab="tab3" href="/tab3">
@@ -70,7 +86,8 @@ const App: React.FC = () => (
         </IonTabBar>
       </IonTabs>
     </IonReactRouter>
-  </IonApp>
-);
+  </IonApp>)
+
+}
 
 export default App;
