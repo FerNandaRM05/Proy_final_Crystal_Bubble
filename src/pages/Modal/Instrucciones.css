@@ -90,6 +90,10 @@
     visibility: hidden;
 }
 
+.b4{
+    display: none;
+}
+
 .points{
     display: flex;
     justify-content: center;
