@@ -54,7 +54,7 @@ const App: React.FC = () => (
             <Redirect to="/home" />
           </Route>
         </IonRouterOutlet>
-        <IonTabBar slot="bottom">
+        <IonTabBar slot="bottom">          
           <IonTabButton tab="contactos" href="/tab1">
             <IonIcon icon={chatbubbles} />
             <IonLabel>Contacto</IonLabel>
