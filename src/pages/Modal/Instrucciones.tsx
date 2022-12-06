@@ -11,7 +11,9 @@ const Instrucciones = ({ setHelp }: { setHelp: React.Dispatch<React.SetStateActi
     let activo = true;
     let [paginaActual, setPaginaActual] = useState(1);
 
-
+//Array de objetos
+/*Si se desean cambiar los textos o imagenes es en esta sección que se puede realizar, se puede modificar 
+los elementos titulo, texto e imagen.*/
     let paginas = [
         {
             pagina: 1,
@@ -28,12 +30,13 @@ const Instrucciones = ({ setHelp }: { setHelp: React.Dispatch<React.SetStateActi
         {
             pagina: 3,
             titulo: "COMPRAS SEGURAS",
-            texto: "Si te gusta algo cómpralo con nuestro sistema seguro a través de la web.",
+            texto: "Si te gusta algo puedes comprarlo con nuestro sistema seguro a través de la web. Agrega tus productos al carrito y compra cuando estés lista.",
             imagen: "./img/compra.png",
             activo: true
         }
     ]
 
+//métodos de los botones
     const handleClick = () => {
 
         if (paginaActual == 3) {
@@ -52,7 +55,7 @@ const Instrucciones = ({ setHelp }: { setHelp: React.Dispatch<React.SetStateActi
         
     }
 
-
+//contenido de las páginas
     return (
         <Modal className='modal'>
             {paginas.map((pagina) => {
