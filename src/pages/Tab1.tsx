@@ -8,14 +8,13 @@ const Tab1: React.FC = () => {
   return (
     <IonPage className='contenido'>
       <IonContent fullscreen className='marg'>
-        <IonHeader collapse="condense">
+        <IonHeader>
           <IonToolbar>
             <IonTitle size="large"></IonTitle>
           </IonToolbar>
         </IonHeader>
         <ExploreContainer name="Contenido estático" />
         <Contacto/>
-
       </IonContent>
     </IonPage>
   );
