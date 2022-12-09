@@ -44,7 +44,7 @@ const Estatic: React.FC = () => {
                 <a href='https://www.instagram.com/crystalbubbleboutique/'><IonIcon icon={logoInstagram} /></a>
                 <a href='https://www.tiktok.com/@crystalbubbleboutique'><IonIcon icon={logoTiktok}/></a>
                 <a href='https://www.youtube.com/crystalbubbleboutique?sub_confirmation=1'><IonIcon icon={logoYoutube}/></a>
-                <a href='https://www.linkedin.com/company/crystalbubbleboutique/'><IonIcon icon={logoLinkedin}/></a>
+                {/* <a href='https://www.linkedin.com/company/crystalbubbleboutique/'><IonIcon icon={logoLinkedin}/></a> */}
               </div>
               <div id='divMapa'>
                 <p><IonIcon icon={locationOutline}/>
