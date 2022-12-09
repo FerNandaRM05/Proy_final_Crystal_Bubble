@@ -5,6 +5,11 @@
     font-family: "Josefin Sans", sans-serif;
 }
 
+.in-toolbar
+{
+    background-color: white;
+}
+
 .contenido
 {
     margin: 0;
