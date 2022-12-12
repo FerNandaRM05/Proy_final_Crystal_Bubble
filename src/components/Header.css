@@ -4,7 +4,7 @@ ion-header{
     align-items: center;
     justify-content: space-between;
     padding: 10px 5px;
-    background-color: white;
+    background-color: var(--ion-tab-bar-background);
 }
 .img{
     max-width: 50%;
