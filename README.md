@@ -7,7 +7,11 @@ Crystal Bubble es una marca innovadora y comprometida, dedicada a la moda solida
 La marca no solo proporciona moda y accesorios a través de su boutique en línea, sino que también impulsa iniciativas solidarias en apoyo a la salud de la mujer, luchando contra el cáncer mediante compras que transforman la moda en momentos únicos y felices. Crystal Bubble apuesta por normalizar el uso de la talla adecuada y hacer sentir a las clientas cómodas y seguras con su propio estilo.
 ## Proyecto Final
 
-La empresa Crystal Bubble solicito a nuestro equipo realizar una app ya que como hoy en dia el dispositivo mas utilizado es el telefono movil, su objetivo era llegar a mas usuarios para que puedan expandir su mercado.
+La empresa Crystal Bubble solicitó a nuestro equipo el desarrollo de una aplicación móvil con el objetivo de adaptarse a las tendencias actuales en el uso de dispositivos móviles. Reconociendo que los teléfonos móviles son hoy en día el medio más utilizado por los consumidores para acceder a información y realizar compras, Crystal Bubble buscaba expandir su presencia digital y alcanzar a una audiencia más amplia y diversa.
+
+El propósito de la aplicación es mejorar la experiencia del cliente, facilitar el acceso a sus productos y servicios, y fortalecer la relación con sus usuarios. Mediante esta app, Crystal Bubble pretende no solo aumentar su alcance de mercado, sino también ofrecer una plataforma interactiva y moderna que permita a los usuarios explorar su catálogo, aprovechar ofertas exclusivas, y mantenerse conectados con la comunidad de moda que la marca ha cultivado.
+
+Nuestro equipo se ha enfocado en desarrollar una interfaz intuitiva y atractiva, incorporando funcionalidades clave que reflejan la identidad y los valores de Crystal Bubble, y que están diseñadas para optimizar la experiencia de compra y fidelizar a los clientes.
 
 ## Herramientas utlizadas
 
@@ -91,4 +95,9 @@ Sigue estos pasos para instalar y configurar el proyecto en tu entorno local:
    tambien podrias utilizar
     ```sh
     npm start
-    
+5. Visualización en Tamaño Móvil
+
+**Acceder a las Herramientas de Desarrollo:**
+   - Presiona `F12` o haz clic derecho y selecciona "Inspeccionar" o "Inspect".
+   - Haz clic en el ícono de dispositivo móvil/tableta en la parte superior izquierda del panel de herramientas de desarrollo o presiona `Ctrl + Shift + M` (Windows/Linux) o `Cmd + Shift + M` (macOS).
+   - Elige un dispositivo específico del menú desplegable en la parte superior del área de visualización.
