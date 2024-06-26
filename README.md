@@ -9,7 +9,7 @@ La marca no solo proporciona moda y accesorios a través de su boutique en líne
 
 La empresa Crystal Bubble solicito a nuestro equipo realizar una app ya que como hoy en dia el dispositivo mas utilizado es el telefono movil, su objetivo era llegar a mas usuarios para que puedan expander su mercado.
 
-### Herramientas utlizadas
+## Herramientas utlizadas
 
 Para este proyecto se opto por utilizar:
 - **Ionic/React.js**
@@ -17,7 +17,7 @@ Para este proyecto se opto por utilizar:
 - **CSS**
 - **TypeScript**
 
-### Descripcion
+## Descripcion
 
 Este proyecto tiene como objetivo desarrollar la interfaz de una aplicación móvil para una tienda de moda, utilizando tecnologías modernas y eficientes. La aplicación ofrece una experiencia de usuario fluida y atractiva, centrada en facilitar la interacción con la tienda y sus productos. La interfaz incluye cuatro secciones principales: `Home, Contacto, Menú y Pasos Introductorios`, cada una diseñada para proporcionar información clave y mejorar la experiencia del usuario.
 
@@ -54,3 +54,39 @@ Este proyecto tiene como objetivo desarrollar la interfaz de una aplicación mó
 El objetivo principal de este proyecto es proporcionar una interfaz de usuario intuitiva y funcional para una aplicación de carrito de compras, optimizando la experiencia de los clientes al interactuar con la tienda y sus productos. Esta interfaz permitirá a los usuarios navegar fácilmente por la aplicación, obtener información relevante y realizar acciones clave como pedir citas, explorar nuevos productos, aprovechar ofertas y contactar con la tienda.
 
 Con una implementación cuidadosa y un diseño centrado en el usuario, la aplicación busca mejorar la satisfacción del cliente y fomentar una mayor interacción con la tienda y su comunidad.
+
+
+## Instalacion
+#### Prerrequisitos
+
+Antes de comenzar, asegúrate de tener instalados los siguientes software en tu máquina:
+
+- **Node.js**: Puedes descargar e instalar Node.js desde [nodejs.org](https://nodejs.org/).
+- **npm**: Node.js incluye npm (Node Package Manager).
+
+Sigue estos pasos para instalar y configurar el proyecto en tu entorno local:
+
+1. **Instalar Ionic CLI**
+
+   Abre tu terminal y ejecuta el siguiente comando para instalar Ionic CLI globalmente:
+
+   ```sh
+   npm install -g @ionic/cli
+2. Clonar el Repositorio
+
+    ```sh
+    git clone https://github.com/usuario/nombre-del-repositorio.git
+    cd nombre-del-repositorio
+3. Instalar Dependencias
+
+Una vez dentro del directorio del proyecto, instala las dependencias necesarias ejecutando:
+
+    npm install
+4. Ejecutar la Aplicación
+
+Inicia el servidor de desarrollo ejecutando:
+    
+    ionic serve
+tambien podrias utilizar
+    
+    npm start
