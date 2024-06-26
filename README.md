@@ -79,14 +79,15 @@ Sigue estos pasos para instalar y configurar el proyecto en tu entorno local:
     cd nombre-del-repositorio
 3. Instalar Dependencias
 
-Una vez dentro del directorio del proyecto, instala las dependencias necesarias ejecutando:
-
+   Una vez dentro del directorio del proyecto, instala las dependencias necesarias ejecutando:
+   ```sh
     npm install
 4. Ejecutar la Aplicación
 
-Inicia el servidor de desarrollo ejecutando:
-    
-    ionic serve
-tambien podrias utilizar
-    
+   Inicia el servidor de desarrollo ejecutando:
+   ```sh 
+   ionic serve
+   ```
+   tambien podrias utilizar
+    ```sh
     npm start
