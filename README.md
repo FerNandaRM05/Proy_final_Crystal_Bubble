@@ -7,7 +7,7 @@ Crystal Bubble es una marca innovadora y comprometida, dedicada a la moda solida
 La marca no solo proporciona moda y accesorios a través de su boutique en línea, sino que también impulsa iniciativas solidarias en apoyo a la salud de la mujer, luchando contra el cáncer mediante compras que transforman la moda en momentos únicos y felices. Crystal Bubble apuesta por normalizar el uso de la talla adecuada y hacer sentir a las clientas cómodas y seguras con su propio estilo.
 ## Proyecto Final
 
-La empresa Crystal Bubble solicito a nuestro equipo realizar una app ya que como hoy en dia el dispositivo mas utilizado es el telefono movil, su objetivo era llegar a mas usuarios para que puedan expander su mercado.
+La empresa Crystal Bubble solicito a nuestro equipo realizar una app ya que como hoy en dia el dispositivo mas utilizado es el telefono movil, su objetivo era llegar a mas usuarios para que puedan expandir su mercado.
 
 ## Herramientas utlizadas
 
